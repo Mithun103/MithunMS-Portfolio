@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImage from '../data/profile.jpg'; // Adjust the path as necessary
 
 const Profile = () => {
   return (
@@ -6,7 +7,7 @@ const Profile = () => {
       <div className="relative w-48 h-48">
         <div className="absolute inset-0 bg-blue-600 rounded-full opacity-10 animate-pulse"></div>
         <img
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+          src={profileImage}
           alt="Mithun M S"
           className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg transform hover:scale-105 transition-transform duration-300"
         />
