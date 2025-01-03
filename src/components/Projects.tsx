@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, Linkedin } from 'lucide-react';
 import { projects } from '../data/projects';
 
 const Projects = () => {
@@ -25,27 +25,40 @@ const Projects = () => {
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                      className="px-3 py-1 bg-gray-100 text-sm rounded-full"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <p className="text-sm text-gray-500">Duration: {project.duration}</p>
-                <div className="flex space-x-4">
-                  <a
-                    href={project.github}
-                    className="inline-flex items-center text-gray-600 hover:text-blue-600"
-                  >
-                    <Github size={20} className="mr-1" />
-                    Code
-                  </a>
+                <div className="flex gap-4 pt-4">
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-gray-900"
+                    >
+                      <Github className="w-6 h-6" />
+                    </a>
+                  )}
+                  {project.linkedin && (
+                    <a
+                      href={project.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-gray-900"
+                    >
+                      <Linkedin className="w-6 h-6" />
+                    </a>
+                  )}
                   <a
                     href={project.demo}
-                    className="inline-flex items-center text-gray-600 hover:text-blue-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-gray-900"
                   >
-                    <ExternalLink size={20} className="mr-1" />
-                    Demo
+                    <ExternalLink className="w-6 h-6" />
                   </a>
                 </div>
               </div>
