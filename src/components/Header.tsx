@@ -24,10 +24,10 @@ const Header = () => {
               </a>
             ))}
             <div className="flex items-center space-x-4">
-              <a href="https://github.com" className="text-gray-600 hover:text-blue-600">
+              <a href="https://github.com/Mithun103" className="text-gray-600 hover:text-blue-600">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-gray-600 hover:text-blue-600">
+              <a href="http://www.linkedin.com/in/mithun-ms-5836b3297" className="text-gray-600 hover:text-blue-600">
                 <Linkedin size={20} />
               </a>
             </div>
