@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { contactInfo } from '../data/contact';
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,24 +10,28 @@ export const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto URL with form data
-    const subject = `Portfolio Contact from ${formData.name}`;
-    const body = `
-Name: ${formData.name}
-Email: ${formData.email}
 
-Message:
-${formData.message}
-    `;
-    
-    // Open default mail client
-    window.location.href = `mailto:${contactInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    setStatus('Message sent successfully!');
-    
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormData({ name: '', email: '', message: '' });
+        setStatus('Message sent successfully!');
+      } else {
+        const errorData = await response.json();
+        setStatus(`Error: ${errorData.error || 'Failed to send message'}`);
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setStatus('Error: Unable to send message.');
+    }
+
     // Clear status after 3 seconds
     setTimeout(() => setStatus(''), 3000);
   };
