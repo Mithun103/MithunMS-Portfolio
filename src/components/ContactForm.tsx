@@ -12,7 +12,7 @@ export const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://vercel.com/mithun103s-projects/portfolio-backend-email/BXLXPyfxByYHXcGfy9P47GTQMtDr/api/contact', {
+      const response = await fetch('https://portfolio-backend-email.vercel.app//api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
