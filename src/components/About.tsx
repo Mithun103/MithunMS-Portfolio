@@ -18,7 +18,7 @@ const About = () => {
 
           <div className="flex justify-center mt-8">
             <a
-              href="https://drive.google.com/file/d/1WVWP0s9K6R8_cSRJSF5It1Rr1k7yjGXQ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1k-Y3YzaDd8xKx7_IZTWRS6S6tcUoXL4J/view?usp=sharing"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <Download size={20} className="mr-2" />
