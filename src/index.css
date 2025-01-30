@@ -16,3 +16,38 @@
 .animate-fadeInUp {
   animation: fadeInUp 0.5s ease-out forwards;
 }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-blink {
+  animation: blink 7s step-end infinite;
+}
+
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end);
+}
+
+.dot-flashing {
+  position: relative;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #3B82F6;
+  animation: dot-flashing 1s infinite linear alternate;
+}
+
+@keyframes dot-flashing {
+  0% { opacity: 0.2; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+  100% { opacity: 0.2; transform: translateY(0); }
+}
