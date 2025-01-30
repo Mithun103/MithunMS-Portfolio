@@ -10,10 +10,11 @@ const FloatingChatbot = () => {
   const [showPopup, setShowPopup] = useState<boolean>(true);
   const [popupText, setPopupText] = useState<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  // const [parent] = useAutoAnimate();
   const popupTimeoutRef = useRef<number | undefined>();
   const typingTimeoutRef = useRef<number | undefined>();
 
-  // Scroll to the latest message
+  // Smooth scroll to bottom when new messages arrive
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -22,12 +23,13 @@ const FloatingChatbot = () => {
     scrollToBottom();
   }, [messages]);
 
+  // Format text with markdown-style bold
   const formatText = (text: string) => {
     const boldRegex = /\*\*(.*?)\*\*/g;
     const semiBoldRegex = /\*(.*?)\*/g;
-
+    
     const parts = text.split(/((?:\*\*.*?\*\*)|(?:\*.*?\*))/g);
-
+    
     return parts.map((part: string, index: number) => {
       if (part.match(boldRegex)) {
         return <span key={index} className="font-bold">{part.replace(/\*\*/g, '')}</span>;
@@ -38,6 +40,7 @@ const FloatingChatbot = () => {
     });
   };
 
+  // Enhanced popup message animation with better timing
   useEffect(() => {
     const messages = [
       "Hi! I'm Mithun's Personal AI Assistant",
@@ -50,7 +53,7 @@ const FloatingChatbot = () => {
 
     const typeMessage = () => {
       if (!showPopup) return;
-
+      
       if (charIndex < messages[messageIndex].length) {
         setPopupText(messages[messageIndex].substring(0, charIndex + 1));
         charIndex++;
@@ -60,7 +63,7 @@ const FloatingChatbot = () => {
           setShowPopup(false);
           charIndex = 0;
           messageIndex = (messageIndex + 1) % messages.length;
-
+          
           popupTimeoutRef.current = setTimeout(() => {
             setShowPopup(true);
             setPopupText('');
@@ -84,15 +87,15 @@ const FloatingChatbot = () => {
         setIsLoading(true);
         const userMessage = { text: inputText, fromUser: true, timestamp: Date.now() };
         setMessages(prev => [...prev, userMessage]);
-
+        
         const response = await fetch('https://portfolio-backend-ai.onrender.com/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ message: inputText })
         });
-
+        
         const data = await response.json();
-
+        
         if (data?.response) {
           setMessages(prev => [...prev, {
             text: data.response,
@@ -115,7 +118,7 @@ const FloatingChatbot = () => {
   };
 
   const Message = ({ text, fromUser }: { text: string; fromUser: boolean }) => (
-    <div className={`mb-4 ${fromUser ? 'ml-auto' : 'mr-auto'} max-w-full`}>
+    <div className={`mb-4 ${fromUser ? 'ml-auto' : 'mr-auto'} max-w-[80%]`}>
       <div
         className={`p-3 rounded-lg shadow-sm
           ${fromUser 
@@ -132,9 +135,9 @@ const FloatingChatbot = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 font-sans">
-      {/* Popup Message */}
+      {/* Neural-themed Popup with improved animation */}
       {!isOpen && showPopup && (
-        <div className="absolute bottom-20 right-0 w-72 transform transition-all duration-300 ease-out sm:w-60 md:w-72 lg:w-96">
+        <div className="absolute bottom-20 right-0 w-72 transform transition-all duration-300 ease-out">
           <div className="bg-white p-4 rounded-lg shadow-lg border border-blue-100 relative">
             <div className="absolute -left-2 top-1/2 w-4 h-4 bg-blue-600 rounded-full animate-pulse" />
             <div className="text-sm text-gray-700">
@@ -144,10 +147,10 @@ const FloatingChatbot = () => {
         </div>
       )}
 
-      {/* Chat Window */}
+      {/* Enhanced Chat Window */}
       {isOpen && (
-        <div className="absolute bottom-20 right-0 max-w-full w-full sm:w-80 md:w-96 bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden p-4 transform transition-all duration-300 ease-out">
-          {/* Header */}
+        <div className="absolute bottom-20 right-0 w-96 h-[32rem] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden transform transition-all duration-300 ease-out">
+          {/* Header with neural design */}
           <div className="bg-gradient-to-r from-blue-700 to-blue-500 p-4 text-white flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Brain className="animate-pulse" size={24} />
@@ -160,9 +163,9 @@ const FloatingChatbot = () => {
               <X size={20} />
             </button>
           </div>
-
-          {/* Messages Container */}
-          <div className="flex-1 p-2 overflow-y-auto bg-gray-50">
+          
+          {/* Messages container with auto-animation */}
+          <div ref={parent} className="flex-1 p-4 overflow-y-auto bg-gray-50">
             {messages.map((msg) => (
               <Message key={msg.timestamp} text={msg.text} fromUser={msg.fromUser} />
             ))}
@@ -176,8 +179,8 @@ const FloatingChatbot = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input Area */}
-          <div className="border-t bg-white p-4 flex gap-2 items-center">
+          {/* Enhanced input area */}
+          <div className="border-t bg-white p-4 flex gap-2">
             <input
               type="text"
               value={inputText}
@@ -203,7 +206,7 @@ const FloatingChatbot = () => {
         </div>
       )}
 
-      {/* Floating Button */}
+      {/* Floating button with neural theme */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="p-4 bg-gradient-to-r from-blue-700 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 relative group"
