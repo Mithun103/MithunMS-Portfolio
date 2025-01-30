@@ -18,6 +18,7 @@ function App() {
         <Skills />
         <Contact />
       </main>
+      <FloatingChatbot />
     </div>
   );
 }
