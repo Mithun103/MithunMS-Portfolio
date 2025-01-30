@@ -88,7 +88,7 @@ const FloatingChatbot = () => {
         const userMessage = { text: inputText, fromUser: true, timestamp: Date.now() };
         setMessages(prev => [...prev, userMessage]);
         
-        const response = await fetch('https://portfolio-backend-ai.vercel.app/api/chat', {
+        const response = await fetch('https://portfolio-backend-ai.onrender.com/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ message: inputText })
