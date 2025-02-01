@@ -13,8 +13,7 @@ const Hero = () => {
               Enthusiast
             </h1>
             <p className="text-xl text-gray-600">
-              An AI/ML enthusiast with hands-on experience in Python, TensorFlow, PyTorch, and Large Language Models.
-            </p>
+            An AI/ML enthusiast with hands-on experience in Python, TensorFlow, PyTorch, and Large Language Models, adept at designing and deploying real-time AI solutions.</p>
             <div className="flex space-x-4">
               <a
                 href="#contact"

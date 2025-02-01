@@ -16,17 +16,15 @@ export const projects: Project[] = [
     duration: 'June 2024',
     tags: ['Power BI', 'Data Analysis', 'Business Intelligence'],
     linkedin: 'https://www.linkedin.com/posts/mithun-ms-5836b3297_powerbi-datavisualization-interactivedashboard-activity-7208096615218257920-0Umd?utm_source=share&utm_medium=member_desktop', // Add LinkedIn link
-    demo: 'https://demo.com',
+    
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71'
   },
   {
     title: 'Medical Chatbot Using LLaMA',
-    description: 'Developed a Flask-based chatbot integrating LLaMA and Langchain-Chroma for extracting data from medical documents and providing detailed diagnoses.',
+    description: 'Developed a Flask-based AI chatbot integrating LLaMA and Langchain-Chroma to extract insights from medical documents and provide detailed diagnoses. Currently upgrading with Agentic AI, Langraph, and multi-model integration featuring live-performing agents for real-time, intelligent assistance. Stay tuned for the next-gen AI experience! coming soon',
     duration: 'September 2024 – Present',
     tags: ['LLaMA', 'Flask', 'RAG', 'Langchain', 'Chatbot'],
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118'
+    image: 'src/data/medical-chatbot-healthcare.jpg'
   },
   {
     title: 'Verba Vision Pro',
@@ -34,8 +32,7 @@ export const projects: Project[] = [
     duration: 'August 2024',
     tags: ['Azure Vision', 'OCR', 'Text Processing',"LLM","Data Manipulation"],
     github: 'https://github.com/Mithun103/verba-vision-pro.git',
-    demo: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1527168027773-0cc890c4f42e'
+    image: 'src/data/Comment-creer-le-guide-dutilisation-parfait.png'
   },
   {
     title: 'Temperature Prediction Model',
@@ -43,16 +40,24 @@ export const projects: Project[] = [
     duration: 'September 2024',
     tags: ['LGBM', 'RandomForest', 'AdaBoost', 'Regression'],
     linkedin: 'https://www.linkedin.com/posts/mithun-ms-5836b3297_iitshastra2-activity-7255794376260345857-mo_l?utm_source=share&utm_medium=member_desktop',
-    demo: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b'
+    image: 'src/data/DALL·E 2025-02-01 21.14.06 - A futuristic and professional cover page for a portfolio project on temperature prediction. The design features a digital globe with heat map overlays.webp'
   },
   {
     title: 'Contextual Spell Correction',
-    description: 'Developed a contextual spell correction system using the LLaMA model for Excel datasets. Enhanced accuracy of handwritten text extraction and processing.',
+    description: 'Developed a contextual spell correction system using the LLaMA model for OCR-generated Excel datasets. Leveraged LLMs to intelligently correct spelling errors within extracted text, improving data accuracy and consistency in tabular formats.',
     duration: 'July 2024',
     tags: ['LLaMA', 'NLP', 'Data Processing', 'Spell Correction','Document Processing'],
     github: 'https://github.com/Mithun103/digi_utils.git',
-    demo: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f'
+    image: 'src/data/Frame.png'
+  },
+  {
+    "title": "AI-Powered Quiz Maker App",
+    "description": "Developed an AI-driven quiz generation application using NLP and Large Language Models (LLMs). The system automatically generates multiple-choice questions (MCQs) based on given Pdf's. It supports by giving real time human level feedback which is dyanamically evaluated by Ai.Integrated Flask for backend processing and React for an interactive user interface.",
+    "duration": "August 2024",
+    "tags": ["NLP", "LLMs", "Quiz Generation", "AI", "Flask", "React","LLama"],
+    "github": "https://github.com/Mithun103",
+    "demo": "https://quizmakerai.netlify.app",
+    "image": "src/data/quiz-1-o.avif"
   }
+  
 ];
