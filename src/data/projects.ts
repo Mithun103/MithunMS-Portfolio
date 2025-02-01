@@ -24,7 +24,7 @@ export const projects: Project[] = [
     description: 'Developed a Flask-based AI chatbot integrating LLaMA and Langchain-Chroma to extract insights from medical documents and provide detailed diagnoses. Currently upgrading with Agentic AI, Langraph, and multi-model integration featuring live-performing agents for real-time, intelligent assistance. Stay tuned for the next-gen AI experience! coming soon',
     duration: 'September 2024 – Present',
     tags: ['LLaMA', 'Flask', 'RAG', 'Langchain', 'Chatbot'],
-    image: 'src/data/medical-chatbot-healthcare.jpg'
+    image: 'medical-chatbot-healthcare.jpg'
   },
   {
     title: 'Verba Vision Pro',
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     duration: 'August 2024',
     tags: ['Azure Vision', 'OCR', 'Text Processing',"LLM","Data Manipulation"],
     github: 'https://github.com/Mithun103/verba-vision-pro.git',
-    image: 'src/data/Comment-creer-le-guide-dutilisation-parfait.png'
+    image: 'Comment-creer-le-guide-dutilisation-parfait.png'
   },
   {
     title: 'Temperature Prediction Model',
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     duration: 'September 2024',
     tags: ['LGBM', 'RandomForest', 'AdaBoost', 'Regression'],
     linkedin: 'https://www.linkedin.com/posts/mithun-ms-5836b3297_iitshastra2-activity-7255794376260345857-mo_l?utm_source=share&utm_medium=member_desktop',
-    image: 'src/data/DALL·E 2025-02-01 21.14.06 - A futuristic and professional cover page for a portfolio project on temperature prediction. The design features a digital globe with heat map overlays.webp'
+    image: 'DALL·E 2025-02-01 21.14.06 - A futuristic and professional cover page for a portfolio project on temperature prediction. The design features a digital globe with heat map overlays.webp'
   },
   {
     title: 'Contextual Spell Correction',
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     duration: 'July 2024',
     tags: ['LLaMA', 'NLP', 'Data Processing', 'Spell Correction','Document Processing'],
     github: 'https://github.com/Mithun103/digi_utils.git',
-    image: 'src/data/Frame.png'
+    image: 'Frame.png'
   },
   {
     "title": "AI-Powered Quiz Maker App",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     "tags": ["NLP", "LLMs", "Quiz Generation", "AI", "Flask", "React","LLama"],
     "github": "https://github.com/Mithun103",
     "demo": "https://quizmakerai.netlify.app",
-    "image": "src/data/quiz-1-o.avif"
+    "image": "quiz-1-o.avif"
   }
   
 ];
