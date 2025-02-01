@@ -1,4 +1,4 @@
-import medicalChatbotImage from '..src/data/medical-chatbot-healthcare.jpg';
+import medicalChatbotImage from '../medical-chatbot-healthcare.jpg';
 export interface Project {
   title: string;
   description: string;
