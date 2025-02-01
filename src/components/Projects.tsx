@@ -52,14 +52,16 @@ const Projects = () => {
                       <Linkedin className="w-6 h-6" />
                     </a>
                   )}
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-gray-900"
-                  >
-                    <ExternalLink className="w-6 h-6" />
-                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-gray-900"
+                    >
+                      <ExternalLink className="w-6 h-6" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
