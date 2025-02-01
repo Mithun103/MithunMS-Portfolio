@@ -14,7 +14,7 @@ const Projects = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <img
-                src={`/data/${project.image}`} // Assuming images are in public/data
+                src={project.image} // Assuming images are in public/data
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
