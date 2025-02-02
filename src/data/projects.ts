@@ -1,5 +1,8 @@
 import medicalChatbotImage from "../data/medical-chatbot-healthcare.jpg";
-
+import digiutil from "../data/Comment-creer-le-guide-dutilisation-parfait.png";
+import spell from "../data/Frame.png";
+import temperature from "../data/DALL·E 2025-02-01 21.14.06 - A futuristic and professional cover page for a portfolio project on temperature prediction. The design features a digital globe with heat map overlays.webp";
+import quiz from "../data/quiz-1-o.avif";
 export interface Project {
   title: string;
   description: string;
@@ -34,7 +37,7 @@ export const projects: Project[] = [
     duration: 'August 2024',
     tags: ['Azure Vision', 'OCR', 'Text Processing',"LLM","Data Manipulation"],
     github: 'https://github.com/Mithun103/verba-vision-pro.git',
-    image: 'Comment-creer-le-guide-dutilisation-parfait.png'
+    image: digiutil
   },
   {
     title: 'Temperature Prediction Model',
@@ -42,7 +45,7 @@ export const projects: Project[] = [
     duration: 'September 2024',
     tags: ['LGBM', 'RandomForest', 'AdaBoost', 'Regression'],
     linkedin: 'https://www.linkedin.com/posts/mithun-ms-5836b3297_iitshastra2-activity-7255794376260345857-mo_l?utm_source=share&utm_medium=member_desktop',
-    image: 'DALL·E 2025-02-01 21.14.06 - A futuristic and professional cover page for a portfolio project on temperature prediction. The design features a digital globe with heat map overlays.webp'
+    image: temperature
   },
   {
     title: 'Contextual Spell Correction',
@@ -50,7 +53,7 @@ export const projects: Project[] = [
     duration: 'July 2024',
     tags: ['LLaMA', 'NLP', 'Data Processing', 'Spell Correction','Document Processing'],
     github: 'https://github.com/Mithun103/digi_utils.git',
-    image: 'Frame.png'
+    image: spell
   },
   {
     "title": "AI-Powered Quiz Maker App",
@@ -59,7 +62,7 @@ export const projects: Project[] = [
     "tags": ["NLP", "LLMs", "Quiz Generation", "AI", "Flask", "React","LLama"],
     "github": "https://github.com/Mithun103",
     "demo": "https://quizmakerai.netlify.app",
-    "image": "quiz-1-o.avif"
+    "image": quiz
   }
   
 ];
