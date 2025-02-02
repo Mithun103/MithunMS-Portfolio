@@ -1,3 +1,5 @@
+import medicalChatbotImage from "../data/medical-chatbot-healthcare.jpg";
+
 export interface Project {
   title: string;
   description: string;
@@ -24,7 +26,7 @@ export const projects: Project[] = [
     description: 'Developed a Flask-based AI chatbot integrating LLaMA and Langchain-Chroma to extract insights from medical documents and provide detailed diagnoses. Currently upgrading with Agentic AI, Langraph, and multi-model integration featuring live-performing agents for real-time, intelligent assistance. Stay tuned for the next-gen AI experience! coming soon',
     duration: 'September 2024 – Present',
     tags: ['LLaMA', 'Flask', 'RAG', 'Langchain', 'Chatbot'],
-    image: medical
+    image: medicalChatbotImage
   },
   {
     title: 'Verba Vision Pro',
