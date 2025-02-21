@@ -44,7 +44,6 @@ export const skillCategories: SkillCategory[] = [
       {name:'Langchain',level:80},
       {name:'langGraph',level:50},
       { name: 'Large Language Models', level: 85},
-      { name: 'Data Engineering', level: 90 },
       { name: 'Data Visualization', level: 85 },
       { name: 'Azure Cloud', level: 80 },
       {name:'Vercel Cloud',level:80}
